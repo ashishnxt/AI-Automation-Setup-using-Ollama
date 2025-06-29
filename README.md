@@ -1,9 +1,8 @@
-
 ## 🧠 Local AI Automation Setup using Ollama + Browser-Use
 ---
 
 ### 📌 Overview
-In this project, I created a **fully local AI-powered automation environment** using my **Ubuntu machine** and **NVIDIA Ada 2000 GPU**. The setup replicates OpenAI Operator's functionality, but runs entirely offline and privately on my system. Here's what I did:
+This document outlines the step-by-step process to:
 
 1. Install and run **Ollama** on Ubuntu
 2. Download and use local AI models like **LLaMA 3** and **DeepSeek**
@@ -33,7 +32,7 @@ ollama --version
 ## 🧠 Step 2: Running AI Models Locally
 ### 🔹 Install LLaMA 3 Model
 ```bash
-llama run llama3
+ollama run llama3
 ```
 ### 🔹 Install DeepSeek Model
 ```bash
@@ -60,7 +59,7 @@ nvidia-smi
 git clone https://github.com/browser-use/browser-use.git
 cd browser-use
 ```
-### 🔧 Create Virtual Environment (recommended)
+### 🔧 Create Python Virtual Environment
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -71,30 +70,26 @@ pip install -r requirements.txt
 ```
 ---
 
-## 🤖 Step 5: Link Browser-Use with Local AI Models
-### 🔹 Example config (optional with local endpoint)
-In `config.py` or `main.py`, configure your endpoint:
+## 🤖 Step 5: Link Browser-Use with Local Ollama Models
+Edit `config.py` or within scripts to connect with local Ollama:
 
 ```python
 OLLAMA_API = "http://localhost:11434"
 MODEL = "llama3"
 ```
->  This ensures all browser tasks are processed via the local Ollama server.
-
-#### Step 5: Enjoy the web-ui
+## 🔄 Step 5: Enjoy the web-ui
 1. **Run the WebUI:** python webui.py --ip 127.0.0.1 --port 7788
 2. **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788` 
 
 
-
-
+---
 
 ## 🛒 Step 6: Amazon Automation Task
 **Automation Flow:**
 
 - Open browser
 - Go to [﻿amazon.in](https://www.amazon.in/) 
-- Search: “LAPTOPS”
+- Search: “LAPTOP”
 - Select first result
 - Add to Cart
 - Proceed to Checkout
@@ -110,7 +105,6 @@ MODEL = "llama3"
 | No Cloud/API Needed | ✅ Fully Local |
 | Real Task Executed | ✅ Amazon checkout |
 ---
-
 
 
 
