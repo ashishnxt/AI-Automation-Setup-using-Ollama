@@ -1,3 +1,6 @@
+https://github.com/user-attachments/assets/ccf27bd5-0994-4394-99a3-5c5df3b84bca
+
+
 ## 🧠 Local AI Automation Setup using Ollama + Browser-Use
 ---
 
@@ -106,10 +109,6 @@ MODEL = "llama3"
 | Real Task Executed | ✅ Amazon checkout |
 ---
 
-
-
-
-https://github.com/user-attachments/assets/ccf27bd5-0994-4394-99a3-5c5df3b84bca
 
 
 
