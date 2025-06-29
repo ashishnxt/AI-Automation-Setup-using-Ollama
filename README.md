@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/724c4b75-b3d8-4852-8009-a1c25382ba48
 ## 🧠 Local AI Automation Setup using Ollama + Browser-Use
 ---
 
@@ -113,5 +112,5 @@ MODEL = "llama3"
 ---
 
 
-https://github.com/user-attachments/assets/0c82f366-bf07-4d0f-9bbf-3bfb4eb0cd70
+
 
