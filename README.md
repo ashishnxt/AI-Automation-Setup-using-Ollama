@@ -54,30 +54,67 @@ nvidia-smi
 ---
 
 ## 🌐 Step 4: Setup Browser-Use (Operator-like Automation)
-### 📥 Clone Repository
-```bash
-git clone https://github.com/browser-use/browser-use.git
-cd browser-use
+## Installation Guide
+#### Step 1: Clone the Repository
 ```
-### 🔧 Create Python Virtual Environment
-```bash
-python3 -m venv .venv
+git clone https://github.com/browser-use/web-ui.git
+cd web-ui
+```
+#### Step 2: Set Up Python Environment
+We recommend using [﻿uv](https://docs.astral.sh/uv/) for managing the Python environment.
+
+Using uv (recommended):
+
+```
+uv venv --python 3.11
+```
+Activate the virtual environment:
+
+- Windows (Command Prompt):
+```
+.venv\Scripts\activate
+```
+- Windows (PowerShell):
+```
+.\.venv\Scripts\Activate.ps1
+```
+- macOS/Linux:
+```
 source .venv/bin/activate
 ```
-### 🧪 Install Dependencies
-```bash
-pip install -r requirements.txt
-```
----
+#### Step 3: Install Dependencies
+Install Python packages:
 
-## 🤖 Step 5: Link Browser-Use with Local Ollama Models
-Edit `config.py` or within scripts to connect with local Ollama:
-
-```python
-OLLAMA_API = "http://localhost:11434"
-MODEL = "llama3"
 ```
----
+uv pip install -r requirements.txt
+```
+Install Browsers in playwright.
+
+```
+playwright install --with-deps
+```
+Or you can install specific browsers by running:
+
+```
+playwright install chromium --with-deps
+```
+#### Step 4: Configure Environment
+1. Create a copy of the example environment file:
+- Windows (Command Prompt):
+```
+copy .env.example .env
+```
+- macOS/Linux/Windows (PowerShell):
+```
+cp .env.example .env
+```
+1. Open `.env`  in your preferred text editor and add your API keys and other settings
+#### Step 5: Enjoy the web-ui
+1. **Run the WebUI:**python webui.py --ip 127.0.0.1 --port 7788
+2. **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788` 
+
+
+
 
 ## 🛒 Step 6: Amazon Automation Task
 **Automation Flow:**
