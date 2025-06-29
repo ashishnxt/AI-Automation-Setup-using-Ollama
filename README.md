@@ -81,7 +81,7 @@ MODEL = "llama3"
 >  This ensures all browser tasks are processed via the local Ollama server.
 
 #### Step 5: Enjoy the web-ui
-1. **Run the WebUI: **python webui.py --ip 127.0.0.1 --port 7788
+1. **Run the WebUI:** python webui.py --ip 127.0.0.1 --port 7788
 2. **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788` 
 
 
